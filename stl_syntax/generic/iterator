@@ -1,0 +1,7 @@
+For Vector:
+
+vector <int>::iterator  it;
+
+For List:
+
+list <int>::iterator it;
