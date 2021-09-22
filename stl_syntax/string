@@ -1,0 +1,9 @@
+Ways to initialize
+
+string s0;                                       // s0 = “”
+string s1(“Hello”);                               // s1 = “Hello”
+string s2 (s1);                                  // s2 = “Hello”
+string s3 (s1, 1, 2);                            // s3 = “el”
+string s4 ("Hello World", 5);                     // s4 = “Hello”
+string s5 (5, ‘*’);                              // s5 = “*****”
+string s6 (s1.begin(), s1.begin()+3);  
