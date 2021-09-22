@@ -1,0 +1,65 @@
+<hackerearth_link1>
+
+Declaration:
+
+stack <int> s;
+
+Functions:
+
+push( ): Insert element at the top of stack. Its time complexity is O(1). 
+pop( ): removes element from top of stack. Its time complexity is O(1). 
+top( ): access the top element of stack. Its time complexity is O(1). 
+empty( ): checks if the stack is empty or not. Its time complexity is O(1). 
+size( ): returns the size of stack. Its time complexity is O(1).
+
+Implementation:
+
+#include <iostream>
+#include <stack>
+
+using namespace std;
+int main( )
+{
+    stack <int> s;  // declaration of stack
+
+    //inserting 5 elements in stack from 0 to 4.
+    for(int i = 0;i < 5; i++)
+    {
+        s.push( i ) ;
+    }
+
+    //Now the stack is {0, 1, 2, 3, 4}
+
+    //size of stack s
+    cout<<”Size of stack is: ” <<s.size( )<<endl;
+
+    //accessing top element from stack, it will be the last inserted element.
+    cout<<”Top element of stack is: ” <<s.top( ) <<endl ;
+
+    //Now deleting all elements from stack 
+    for(int i = 0;i < 5;i++)
+    {
+        s.pop( );
+    }
+
+    //Now stack is empty,so empty( ) function will return true.
+
+    if(s.empty())
+    {
+        cout <<”Stack is empty.”<<endl;
+    }
+    else
+    {
+        cout <<”Stack is Not empty.”<<endl;
+    }
+
+    return 0;
+
+}
+Output:
+
+Size of stack is: 5
+Top element of stack is: 4
+Stack is empty.
+
+</hackerearth_link1>
