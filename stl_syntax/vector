@@ -1,0 +1,87 @@
+Operations
+#include <iostream>
+#include <vector>
+using namespace std;
+ 
+int main() {
+ 
+ //ways of initialization
+ vector<int> v1;
+ vector<int> v2 = {10, 20, 30};
+ vector<int> v3(5, 7); //(size, value)
+ vector<int> v4(6); //size
+ vector<int> anothervector (2,400);
+ vector<int> v5 {1, 2, 3, 4, 5, 6, 7, 8};
+ 
+ 
+ //push_back, pop_back
+ v1.push_back(1);
+ v1.push_back(2);
+ v1.push_back(3);
+ 
+ for(int i = 0; i < 5; ++i){
+   cout << v3[i] << endl;
+ }
+ 
+ //initialization of iterators
+ vector<int>::iterator it1;
+ //or
+ auto it2 = v1.begin();
+ 
+ it1 = v1.begin() + 2;
+ 
+ //insert variations
+ v1.insert(it1, 4); //(position, value)
+ v2.insert(v2.end() - 1, anothervector.begin(), anothervector.end()); //(position to insert, another_vector_start_position, another_vector_end_position)
+  int myarray [] = { 501,502,503 };
+ vector<int> myvector;
+ myvector.insert (myvector.begin(), myarray, myarray+3);
+ 
+ 
+ //deleting elements
+ 
+ v3.pop_back();
+ v4.clear(); // removing all elements, making it size 0
+ v5.erase(v5.begin() + 3, v5.begin() + 6) ; //[first,last)
+ 
+ cout << "myvector contains:";
+ for (auto it = myvector.begin(); it < myvector.end(); it++)
+   cout << ' ' << *it;
+ cout << '\n';
+ 
+ cout << "v1 contains:";
+ for (auto it = v1.begin(); it < v1.end(); it++)
+   cout << ' ' << *it;
+ cout << endl;
+ 
+ cout << "v2 contains:";
+ for (auto it = v2.begin(); it < v2.end(); it++)
+   cout << ' ' << *it;
+ cout << endl;
+ 
+ cout << "v3 contains:";
+ for (auto it = v3.begin(); it < v3.end(); it++)
+   cout << ' ' << *it;
+ cout << endl;
+ 
+ cout << "v4 contains:";
+ for (auto it = v4.begin(); it < v4.end(); it++)
+   cout << ' ' << *it;
+ cout << endl;
+ 
+ cout << "v5 contains:";
+ for (auto it = v5.begin(); it < v5.end(); it++)
+   cout << ' ' << *it;
+ cout << endl;
+ 
+ 
+}
+ 
+Output
+
+	myvector contains: 501 502 503
+v1 contains: 1 2 4 3
+v2 contains: 10 20 400 400 30
+v3 contains: 7 7 7 7
+v4 contains:
+v5 contains: 1 2 3 7 8
