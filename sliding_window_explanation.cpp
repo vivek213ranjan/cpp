@@ -52,7 +52,7 @@ Code (Successfully Ran) -----
  
  vector<int> subarraySum(int arr[], int n, long long s)
     {
-    	//Base case to handle for single element
+    	//Base case to handle for single element - return 1 , 1 as we need to return with 1 based indexing
         if (n ==1 && arr[0] == s) {
             vector<int> result2;
             result2.push_back(1);
@@ -86,8 +86,8 @@ Code (Successfully Ran) -----
         		resultWindowStart = window_start;
         		resultWindowEnd = window_end;
         		vector<int> result;
-        	    result.push_back(resultWindowStart+1);
-        	    result.push_back(resultWindowEnd+1);
+        	    result.push_back(resultWindowStart+1); //return with +1 as we need to return 1 based indexing
+        	    result.push_back(resultWindowEnd+1); //return with +1 as we need to return 1 based indexing
         		return result;
         	}
         }
