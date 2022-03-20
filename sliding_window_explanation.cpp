@@ -45,3 +45,54 @@ target = 102
  		- cursum = 103 -1 (we have removed 1st index element) = 102
  		102  == 102
  		- This is good.
+
+
+Code (Successfully Ran) ----- 
+ 
+ 
+ vector<int> subarraySum(int arr[], int n, long long s)
+    {
+    	//Base case to handle for single element
+        if (n ==1 && arr[0] == s) {
+            vector<int> result2;
+            result2.push_back(1);
+            result2.push_back(1);
+            return result2;
+        }
+
+
+        int window_start = 0;
+    	int window_end = 0;
+    	int curSum = arr[0];
+
+    	int resultWindowStart = 0;
+    	int resultWindowEnd = 0;
+        
+        for(int i = 1; i < n; ++i){
+            
+        	window_end = i;
+
+        	//include current value in currentsum
+        	curSum = curSum + arr[i];
+            // cout<<curSum<<endl;
+        	if(curSum > s) {
+        		while(curSum > s) {
+        			curSum -= arr[window_start];
+        			window_start++;
+        		}
+        	}
+
+        	if (curSum == s) {
+        		resultWindowStart = window_start;
+        		resultWindowEnd = window_end;
+        		vector<int> result;
+        	    result.push_back(resultWindowStart+1);
+        	    result.push_back(resultWindowEnd+1);
+        		return result;
+        	}
+        }
+
+        //If we don't find any window with given sum, return [-1]
+        vector<int> test(1, -1);
+        return test;
+    }
