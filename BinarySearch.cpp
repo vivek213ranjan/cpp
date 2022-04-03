@@ -127,10 +127,7 @@ Mid = (L + R) /2 => overflow
 Mid = L + (R-L)/2
 
 	
-	L ............. R 
-	...........................L + R
 
-........L....(R-L)/2....R
 
 a= []
 When wedeal with arrays -> we are bound to have indexes till 10^6
@@ -147,9 +144,12 @@ L+R <= 4*10^9 - Which is not in Integer range (hence it will overflow)
 
 Integer = 2^31 - 1 ~2.x*10^9
 
-mid = L + (R-L)/2 -> Refer screenshot/image
+mid = L + (R-L)/2 -> Refer this
+	
+	L ............. R 
+	...........................L + R
 
-
+........L....(R-L)/2....R
 
 
 
