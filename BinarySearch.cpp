@@ -4,12 +4,12 @@ Binary Search
 
 target      search space
 
-word         dictionary (F) / newspaper
-contact      phonebook(F) / diary
+word         dictionary (Fast) / newspaper
+contact      phonebook(Fast) / diary
 
 input sorted/arranged
 
-
+In a dictionary, we are at a page displaying bharat in the page
 ------------------------ "Bharat" ----------------------------
 
 remove irrelevant search space
