@@ -126,6 +126,11 @@ public:
 Mid = (L + R) /2 => overflow
 Mid = L + (R-L)/2
 
+	
+	L ............. R 
+	...........................L + R
+
+........L....(R-L)/2....R
 
 a= []
 When wedeal with arrays -> we are bound to have indexes till 10^6
