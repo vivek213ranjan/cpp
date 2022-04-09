@@ -1,3 +1,73 @@
+Queue
+
+Data structure 
+
+Principle -> FIFO (First in first out)
+
+Eg: Queue of people standing outside railway ticket counter
+
+Constraints:
+1) Element can only be inserted at end/back  
+2) Elements can only be removed from front
+
+
+Operation
+1) front() -> to get the front element from the queue
+2) push() ->  inserts an element in queue at one end(rear ). Its time complexity is O(1). 
+3) pop() -> deletes an element from another end if queue(front). Its time complexity is O(1).
+
+
+q = [ ]
+	 ^
+	 |
+	front,rear
+
+
+Empty queue, front = not defined, rear = not defined
+------------
+           
+------------
+
+push(q, 4) front = 4, rear = 4
+
+------------
+         4  
+------------
+
+push(q, 3), front = 4, rear = 3
+
+-------------
+        4   3  
+-------------
+
+push(q, 2), front = 4, rear = 2
+
+--------------
+     4   3   2
+--------------
+
+
+push(q, 1), front = 4, rear = 1
+
+---------------
+  4   3   2   1
+---------------
+
+
+pop(q), front = 3, rear = 1
+
+---------------
+     3   2   1
+---------------
+
+q = [ 3  2   1]
+      ^      ^
+      |      |
+    front   rear
+
+
+
+
 <hackerearth_link1>
 
 Declaration:
@@ -27,16 +97,24 @@ int main() {
     int N = 3;                            // Number of steps
     char ch;
     for(int i = 0;i < 4;++i)
-        q.push(qu[i]);
+        q.push(qu[i]); 
+
+    // = q = [a, b, c, d]
+
     for(int i = 0;i < N;++i) {
             ch = q.front();
-    q.push(ch);
+            q.push(ch);
             q.pop();
     }
+    // q = [d, a, b, c]
+
+
     while(!q.empty()) {
         printf("%c", q.front());
         q.pop();
     }
+
+    // d a b c
     printf("\n");
     return 0;
 }
