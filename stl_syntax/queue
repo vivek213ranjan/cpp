@@ -1,49 +1,133 @@
+Stack
+
+Data structure 
+
+Principle -> LIFO (Last In first out)
+
+Eg: Stack of plates on table
+
+Constraints:
+1) Element can only be inserted / removed from top
+
+
+Operation
+1) top() -> to get the top element from the stack
+2) push() ->  Insert element at the top of stack. Its time complexity is O(1). 
+3) pop() -> removes element from top of stack. Its time complexity is O(1).
+
+
+s = [ ]
+	 ^
+	 |
+	top
+
+
+Empty stack, top = not defined
+------------
+           |
+------------
+
+push(s, 4)
+
+------------
+         4  |
+------------
+
+push(s, 3)
+
+-------------
+      3   4  |
+-------------
+
+push(s, 2)
+
+--------------
+    2  3   4  |
+--------------
+
+
+push(s, 1)
+
+---------------
+ 1   2  3   4  |
+---------------
+
+
+s = [1, 2, 3, 4]
+	 ^
+	 |
+	top
+
+
+
+
 <hackerearth_link1>
 
 Declaration:
 
-queue <int> q;
+stack <int> s;
 
 Functions:
 
-
-push( ): inserts an element in queue at one end(rear ). Its time complexity is O(1). 
-pop( ): deletes an element from another end if queue(front). Its time complexity is O(1). 
-front( ): access the element on the front end of queue. Its time complexity is O(1). 
-empty( ): checks if the queue is empty or not. Its time complexity is O(1). 
-size( ): returns the size of queue. Its time complexity is O(1).
+push( ): Insert element at the top of stack. Its time complexity is O(1). 
+pop( ): removes element from top of stack. Its time complexity is O(1). 
+top( ): access the top element of stack. Its time complexity is O(1). 
+empty( ): checks if the stack is empty or not. Its time complexity is O(1). 
+size( ): returns the size of stack. Its time complexity is O(1).
 
 Implementation:
 
 #include <iostream>
-#include <cstdio>
-#include <queue>
+#include <stack>
 
 using namespace std;
+int main( )
+{
+    stack <int> s;  // declaration of stack
 
-int main() {
-    char qu[4] = {'a', 'b', 'c', 'd'};        
-    queue <char> q;
-    int N = 3;                            // Number of steps
-    char ch;
-    for(int i = 0;i < 4;++i)
-        q.push(qu[i]);
-    for(int i = 0;i < N;++i) {
-            ch = q.front();
-    q.push(ch);
-            q.pop();
+    //inserting 5 elements in stack from 0 to 4.
+    for(int i = 0;i < 5; i++)
+    {
+        s.push( i ) ;
     }
-    while(!q.empty()) {
-        printf("%c", q.front());
-        q.pop();
+
+    // s = top=>[4, 3, 2, 1, 0]
+
+    //size of stack s
+    cout<<”Size of stack is: ” <<s.size( )<<endl;
+    // 5
+
+    //accessing top element from stack, it will be the last inserted element.
+    cout<<”Top element of stack is: ” <<s.top( ) <<endl ;
+
+    // top -> 4
+
+    //Now deleting all elements from stack 
+    for(int i = 0;i < 5;i++)
+    {
+        s.pop( );
     }
-    printf("\n");
+
+    // s = top -> []
+
+    //Now stack is empty,so empty( ) function will return true.
+
+    if(s.empty())
+    {
+        cout <<”Stack is empty.”<<endl;
+    }
+    else
+    {
+        cout <<”Stack is Not empty.”<<endl;
+    }
+
     return 0;
+
 }
 Output:
 
-dabc
-
-
+Size of stack is: 5
+Top element of stack is: 4
+Stack is empty.
 
 </hackerearth_link1>
