@@ -9,8 +9,7 @@ contact      phonebook(F) / diary
 
 input sorted/arranged
 
-
------------------------- "Bharat" ----------------------------
+In a dictionary, we are at a page displaying bharat in the page
 
 remove irrelevant search space
 
@@ -225,3 +224,10 @@ int findMin(int arr[], int n)
         }
         return arr[start];
     }
+mid = L + (R-L)/2 -> Refer this
+	
+	L ............. R 
+	...........................L + R
+
+........L....(R-L)/2....R
+
