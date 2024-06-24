@@ -63,8 +63,6 @@ int main()
 }
 Output:
 
-HELLO is equal to HELLO
-HELLO WORLD!
 HELLO WORLD!
 HELLO WORLD! is not equal to HELLO
 
